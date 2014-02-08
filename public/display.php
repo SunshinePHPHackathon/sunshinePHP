@@ -9,12 +9,11 @@ use Ctct\Components\Contacts\Note;
 $cc = new ConstantContact($config['ccApiKey']);
 $contact = $cc->getContact($config['ccApiToken'], $_GET['id']);
 
-$baconBits = $contact->company_name;
+$baconBits = substr($contact->company_name, 2);
 $zombiePic = $contact->notes[0]->note;
 
-
-
-var_dump($contact);
-
 ?>
-<img src="<?=$zombiePic?>" />
+
+Name: <?=$contact->first_name.' '.$contact->last_name;?>
+Quote: <quote><?=$baconBits;?></quote>
+<img src="<?=$zombiePic?>" width="250" />
