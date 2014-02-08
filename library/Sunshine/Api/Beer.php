@@ -10,7 +10,7 @@ class Beer
 
 	public function __construct()
 	{
-		$config = new \Zend\Config\Config(require __DIR__ . '/../../../config/config-sample.php');
+		$config = new \Zend\Config\Config(require __DIR__ . '/../../../config/config.php');
 		$this->_bdb = new Pintlabs_Service_Brewerydb($config['beerKey']);
 		$this->_bdb->setFormat('php'); // if you want to get php back. 'xml' and 'json' are also valid options.
 	}
