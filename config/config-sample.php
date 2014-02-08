@@ -2,5 +2,6 @@
 
 return array(
     'ccApiKey' => '',
-    'ccApiToken' => ''
+    'ccApiToken' => '',
+    'baconApiUrl' => ''
 );
