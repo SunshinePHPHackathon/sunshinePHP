@@ -1,4 +1,6 @@
 <?php
 
-$ccApiKey = "keyyyyyy";
-$ccSharedKey = "tokennnnn";
+return array(
+    'ccApiKey' => '',
+    'ccApiToken' => ''
+);
