@@ -24,7 +24,7 @@ require_once 'shared.php';
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -41,48 +41,54 @@ require_once 'shared.php';
     <div class="container">
 
         <div class="page-header">
-            <h1>BaconTown <small>Your source, for all things <em>Bacon &amp; Beer</em></small></h1>
+            <h1>Zombeeraconator! <small>Your guide to all things Beer & Bacon.</small></h1>
+            <h5>Enter your information below, but watch out for zombies.</h5>
         </div>
 
-        <form class="form-horizontal" role="form" action="submit.php" method="post">
-            <div class="form-group">
-                <label for="first_name" class="col-sm-2 control-label">First Name</label>
-                <div class="col-sm-10">
-                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="John" />
+        <div class="row">
+            <form class="form-horizontal" role="form" action="submit.php" method="post">
+                <div class="form-group">
+                    <label for="first_name" class="col-sm-2 control-label">First Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="first_name" id="first_name" class="form-control" placeholder="John" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="last_name" class="col-sm-2 control-label">Last Name</label>
-                <div class="col-sm-10">
-                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Bacon" />
+                <div class="form-group">
+                    <label for="last_name" class="col-sm-2 control-label">Last Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Bacon" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                    <input type="text" name="email" id="email" class="form-control" placeholder="heartsbacon@mmm.com" />
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="email" id="email" class="form-control" placeholder="heartsbacon@mmm.com" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="city" class="col-sm-2 control-label">City</label>
-                <div class="col-sm-10">
-                    <input type="text" name="city" id="city" class="form-control" placeholder="BaconTown" />
+                <div class="form-group">
+                    <label for="city" class="col-sm-2 control-label">City</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="city" id="city" class="form-control" placeholder="BaconTown" />
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <label for="state" class="col-sm-2 control-label">State</label>
-                <div class="col-sm-10">
-                    <input type="text" name="state" id="state" class="form-control" placeholder="IL" />
+                <div class="form-group">
+                    <label for="state" class="col-sm-2 control-label">State</label>
+                    <div class="col-sm-5">
+                        <input type="text" name="state" id="state" class="form-control" placeholder="IL" />
+                    </div>
                 </div>
-            </div>
 
-
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-        </form>
+                <div class="form-group">
+                    <div class="col-sm-5 col-sm-offset-2">
+                        <button class="btn btn-lg btn-danger btn-block" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div> <!-- /container -->
 
 
