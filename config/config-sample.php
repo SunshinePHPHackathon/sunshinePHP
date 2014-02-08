@@ -5,5 +5,6 @@ return array(
     'ccApiToken' => '',
     'fsApiKey' => '',
     'fsApiToken' => '',
-    'baconApiUrl' => ''
+    'baconApiUrl' => '',
+    'beerKey' => ''
 );
