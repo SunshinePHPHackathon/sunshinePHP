@@ -11,13 +11,21 @@
             "homepage": ""
         }
     ],
+    "repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.zendframework.com/"
+    }],
     "require": {
         "php": ">=5.4.0",
         "ext-curl": "*",
-        "constantcontact/constantcontact": "1.1.*"
+        "constantcontact/constantcontact": "1.1.*",
+        "zendframework/zend-http": "2.*",
+        "zendframework/zend-config": "2.*"
     },
     "autoload": {
         "psr-0": {
+            "Sunshine\\": "library/"
         }
     }
 }
