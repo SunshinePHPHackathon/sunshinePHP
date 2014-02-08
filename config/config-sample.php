@@ -2,5 +2,7 @@
 
 return array(
     'ccApiKey' => '',
-    'ccApiToken' => ''
+    'ccApiToken' => '',
+    'fsApiKey' => '',
+    'fsApiToken' => ''
 );
