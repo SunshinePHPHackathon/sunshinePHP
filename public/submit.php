@@ -4,6 +4,7 @@ require_once 'shared.php';
 
 use Sunshine\Api\FourSquare;
 use Sunshine\Api\Bacon;
+use Sunshine\Api\Beer;
 use Ctct\ConstantContact;
 use Ctct\Components\Contacts\Contact;
 use Ctct\Components\Contacts\Note;
@@ -43,6 +44,8 @@ $contact->notes = array($note);
 $contact->addList($list);
 $contact->company_name = substr($baconLine, 0, 49);
 
+$beer = new Beer();
+$breweries = $beer->getBreweries($city, $state);
 
 $response = $cc->addContact($config['ccApiToken'], $contact, false);
 
