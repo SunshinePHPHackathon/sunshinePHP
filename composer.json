@@ -1,0 +1,23 @@
+{
+    "name": "SunshinePHP Hackathon",
+    "type": "application",
+    "description": "Application for SunshinePHPHackathon",
+    "keywords": ["bacon, beer"],
+    "homepage": "",
+    "authors": [
+        {
+            "name": "People",
+            "email": "us@email.com",
+            "homepage": ""
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-curl": "*",
+        "constantcontact/constantcontact": "1.1.*"
+    },
+    "autoload": {
+        "psr-0": {
+        }
+    }
+}
