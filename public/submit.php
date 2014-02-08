@@ -46,6 +46,8 @@ $contact->company_name = substr($baconLine, 0, 49);
 
 $response = $cc->addContact($config['ccApiToken'], $contact, false);
 
-var_dump($response);
+
+//var_dump($response);
 
 
+header("Location:display.php?id={$response->id}");
