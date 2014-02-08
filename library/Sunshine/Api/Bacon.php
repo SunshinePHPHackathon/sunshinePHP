@@ -17,12 +17,12 @@ class Bacon
         $this->client->setOptions(array('sslverifypeer' => false));
     }
     
-    public function getContent($paragraphs = 1)
+    public function getContent($sentences = 1)
     {
         //?type=all-meat&paras=1
         $params = new Parameters(array(
             'type' => 'all-meat',
-            'paras' => $paragraphs
+            'sentences' => $sentences
         ));
         
         $request = new Request();
