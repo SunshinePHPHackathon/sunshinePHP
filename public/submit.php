@@ -17,14 +17,23 @@ echo $email;
 echo $city;
 
 $bacon = new Bacon();
-$notes = $bacon->getContent(1);
-$note = new Note();
-$note->note = $notes;
+$baconLine = $bacon->getContent(1);
+
+// get random zombie pic
+$image = rand(1, 8);
+$page = rand(1, 20);
+
+$url = "https://ajax.googleapis.com/ajax/services/search/images?q=zombie&v=1.0&imgsz=small&rsz=8&page={$page}";
+$data = file_get_contents($url);
+$json = json_decode($data);
 
 $cc = new ConstantContact($config['ccApiKey']);
 
 // gets the default list
 $list = $cc->getList($config['ccApiToken'], 1);
+
+$note = new Note();
+$note->note = $json->responseData->results[$image - 1]->url;
 
 $contact = new Contact();
 $contact->first_name = $first_name;
@@ -32,6 +41,8 @@ $contact->last_name = $last_name;
 $contact->addEmail($email);
 $contact->notes = array($note);
 $contact->addList($list);
+$contact->company_name = substr($baconLine, 0, 49);
+
 
 $response = $cc->addContact($config['ccApiToken'], $contact, false);
 
